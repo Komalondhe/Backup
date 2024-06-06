@@ -1,9 +1,7 @@
 package com.Day15;
-
-
 import java.util.*;
 public class Dijkstra {
-// Class to represent a graph edge
+// lass to represent a graph edge
 static class Edge {
 int target;
 int weight;
@@ -25,8 +23,7 @@ public int compareTo(Node other) {
 return Integer.compare(this.distance, other.distance);
 }
 }
-// Method to find the shortest path from a start node to all other
-//nodes
+// Method to find the shortest path from a start node to all other nodes
 public static int[] dijkstra(List<List<Edge>> graph, int start) {
 int numVertices = graph.size();
 int[] distances = new int[numVertices];
@@ -79,10 +76,8 @@ graph.get(4).add(new Edge(3, 2));
 // Run Dijkstra's algorithm from start node 0
 int startNode = 0;
 int[] distances = dijkstra(graph, startNode);
-// Print the shortest distances from the start node to all other
-//nodes
-System.out.println("Shortest distances from node " + startNode
-+ ":");
+// Print the shortest distances from the start node to all other nodes
+System.out.println("Shortest distances from node " + startNode+ ":");
 for (int i = 0; i < distances.length; i++) {
 System.out.println("To node " + i + " : " + distances[i]);
 }
