@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Flowers</title>
+<link rel="stylesheet"href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="img">
+            <img src="logo.jpg"alt=" gift Flowers">
+        </div>
+        <div class="p">
+            <ul>
+                
+                <li><a href="flowerTable.html"class="active">Flowers</a></li>
+                <li><a href="#gift">Gifts</a></li>
+                <li><a href="#occation">Occation</a></li>
+                <li><a href="flex.html">flex</a></li>
+            </ul>
+            </div>
+            
+        
+        <marquee>
+        <h1>Gift Flowers to your love one !</h1>
+    </marquee>
+    </header>
+   
+    
+    <div class="form">
+        <form>
+            <h2>Order Now</h2>
+            <label for="name">Fist-Name</label>
+            <input type="text"id="name"name="name"required><br><br>
+            <label for="lname">Last-Name</label>
+            <input type="text"id="lname"name="lname"><br><br>
+            <label for="email">Email:</label>
+ <input type="text" id="email" name="email"> <br><br>
+ <label for="address">Address</label>
+ <input type="textarea"id="address"name="address"><br><br>
+<button type="button" onclick="validateEmail()"> Submit </button> 
+</form> <p id="message" class="error"></p> 
+<script>
+ // Regular expression for validating email
+ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Function to validate the email format
+ function validateEmail() { 
+const emailInput = document.getElementById('email').value;
+ const messageElement = document.getElementById('message'); 
+if (emailRegex.test(emailInput)) {
+ messageElement.textContent = 'Email format is correct.';
+ messageElement.style.color = 'green'; 
+} else
+ { messageElement.textContent = 'Invalid email format. Please enter a valid email address.';
+ messageElement.style.color = 'red';
+ } } 
+</script>
+
+        </form>
+    </div>
+    
+</body>
+<footer>
+    <P>
+        for more information contact us
+        <li><a href="https://github.com/">Contact us</a></li>
+    </P>
+</footer>
+</html>
