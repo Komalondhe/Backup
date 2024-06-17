@@ -1,0 +1,43 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header,footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+ .container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+ }
+ .sidebar , .main-content, .extra-content{
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+ }
+ .sidebar, .extra-content{
+    background-color: palevioletred;
+    flex: 1;
+    min-width: 200px;
+ }
+ .main-content{
+    background-color: yellowgreen;
+    flex: 2;
+ }
+
+ .extra-content{
+    background-color: rgb(36, 138, 163);
+    flex: 2;
+ }
+ @media(max-width:768px){
+    .sidebar, .main-content, .extra-content{
+        flex: 100%;
+    }
+ }
